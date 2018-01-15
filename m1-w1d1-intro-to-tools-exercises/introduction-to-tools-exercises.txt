@@ -28,7 +28,7 @@ actual command from other text in Unix documentation.
 ----
 2.  What does the ~ (tilde) character in the above command to change directory 
     refer to?
-----
+----Home Folder
 
 
 ----
@@ -38,7 +38,8 @@ actual command from other text in Unix documentation.
 ----
 
 $ pwd
-<type or copy-paste the result here>
+</Users/tylergrant/workspace/exercises/m1-w1d1-intro-to-tools-exercises/java-helloworld
+TecheleorsAir41:java-helloworld tylergrant$>
 
 The present working directory displayed should match the directory you changed 
 to in Exercise 1.  Note, the two may not match at the very beginning if you
@@ -54,7 +55,13 @@ changes directory, and the "pwd" command reflects this.
 ----
 
 $ ls -la
-<type or copy-paste the result here>
+<total 8
+drwxr-xr-x  5 tylergrant  staff   170 Jan 15 14:27 .
+drwxr-xr-x  4 tylergrant  staff   136 Jan 15 14:27 ..
+drwxr-xr-x  3 tylergrant  staff   102 Jan 15 14:27 database
+-rwxr-xr-x  1 tylergrant  staff  1091 Jan 15 14:27 pom.xml
+drwxr-xr-x  4 tylergrant  staff   136 Jan 15 14:27 src
+TecheleorsAir41:java-helloworld tylergrant$ >
 
 
 ----
@@ -62,14 +69,14 @@ $ ls -la
     Exercise 4 represent?
 ----
 
-<type or copy-paste your answer here>
+<. represents the current directory and .. represents the parent directory>
 
 ----
 6.  What are the names of the files, including any dot-files, displayed in the
     directory listing in Exercise 4?
 ----
 
-<type or copy-paste your answer here>
+<. .. database src>
 
 
 ----
@@ -77,7 +84,7 @@ $ ls -la
     the directory listing in Exercise 4?
 ----
 
-<type or copy-paste your answer here>
+<pom.xml>
 
 
 ----
@@ -123,7 +130,9 @@ You are encouraged to make "less" part of your standard command line toolkit.
 Did you remember to save "m1-introduction-to-tools-exercise.txt"?
 
 $ git status
-<type or copy-paste the result here>
+<On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean>
 
 $ git add .
 <type or copy-paste the result here>
