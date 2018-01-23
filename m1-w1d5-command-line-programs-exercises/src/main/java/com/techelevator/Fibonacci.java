@@ -1,5 +1,7 @@
 package com.techelevator;
 
+import java.util.Scanner;
+
 /*
  The Fibonacci numbers are the integers in the following sequence:  
 	0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ...
@@ -17,7 +19,30 @@ Please enter the Fibonacci number: 25
 public class Fibonacci {
 
 	public static void main(String[] args) {
-
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Please enter the Fibonacci number: ");
+		String fibString = input.nextLine();
+		
+		int fib = Integer.parseInt(fibonacci);
+		
+		int a = 0;
+		int b = 1;
+		int c = 0;
+		
+		if (fib != 0 ) {
+			for (int i = 0; i <= fib; i += 0) {
+				System.out.print(a + " ");
+				c = b + a;
+				a=b;
+				b=c;
+				i=c;
+			}
+		}else {System.out.print("0 is the first number in the Fibanacci sequence");
+		
+			}
+		}
+	
 	}
 
-}
+
