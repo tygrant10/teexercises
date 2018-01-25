@@ -19,30 +19,16 @@ Please enter the Fibonacci number: 25
 public class Fibonacci {
 
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
-		
-		System.out.print("Please enter the Fibonacci number: ");
-		String fibString = input.nextLine();
-		
-		int fib = Integer.parseInt(fibonacci);
-		
-		int a = 0;
-		int b = 1;
-		int c = 0;
-		
-		if (fib != 0 ) {
-			for (int i = 0; i <= fib; i += 0) {
-				System.out.print(a + " ");
-				c = b + a;
-				a=b;
-				b=c;
-				i=c;
-			}
-		}else {System.out.print("0 is the first number in the Fibanacci sequence");
-		
-			}
-		}
-	
-	}
 
+		int limit = Integer.parseInt(args[0]);
+		int previous = 0;
+		System.out.print("0");
+		for(int next = 1; next < limit; ) { 
+			System.out.print(", "+next);
+			int temp = previous + next;
+			previous = next;
+			next = temp;
+		}
+	}
+}
 
