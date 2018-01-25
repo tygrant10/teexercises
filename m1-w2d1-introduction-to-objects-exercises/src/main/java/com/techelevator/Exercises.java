@@ -214,13 +214,19 @@ public class Exercises {
 	 endsLy("oddy") → false
 	 */
 	public boolean endsLy(String str) {
-		char[] ly = {'l' , 'y'};
-		if (str.substring(str.length() - 2, str.length() -1) .equals(ly)) {
+		int len = str.length();
+		String ly = "ly";
+		if (len < 2) {
+			return false;
+		}	else if 
+			(ly.equals(str.substring(len-2,len))) {
 			return true;
-		} else {
+	}
+		else {
 			return false;
 		}
-	}
+}
+		
 
 	/*
 	 Given a string and an int n, return a string made of the first and last n chars from the string. The 
@@ -246,15 +252,11 @@ public class Exercises {
 	 twoChar("java", 3) → "ja"
 	 */
 	public String twoChar(String str, int index) {
-		if (index < 2) {
-			return str.substring(0); 
-			
-			} else if (index > str.length()) {
-				return str.substring(0, 2);
-		} else {
-		return str.substring(0, 2);
+		 if(index + 2 > str.length() || index < 0) {
+		        return str.substring(0, 2);
+		 }    
+		    return str.substring(index, index + 2);
 		}
-	}
 	/*
 	 Given a string of odd length, return the string length 3 from its middle, so "Candy" yields "and". 
 	 The string length will be at least 3.
@@ -263,13 +265,8 @@ public class Exercises {
 	 middleThree("solving") → "lvi"
 	 */
 	public String middleThree(String str) {
-			if (str.length() % 2 == 0) {
-			return str; 
-			} else if (str.length() < 3) {
-				return str;
-			} else {
-				return str.substring(str.length() % 2, (str.length() % 2) + 2);
-			}
+		 int len = str.length() / 2;
+		  return str.substring(len-1,len+2);
 		}
 	
 
@@ -282,7 +279,15 @@ public class Exercises {
 	 hasBad("xxbadxx") → false
 	 */
 	public boolean hasBad(String str) {
-		return false;
+		if (str.length() <= 2) {
+			return false;
+		} else {
+			if (str.length() == 3) {
+				return (str.substring(0, 3).equals("bad"));
+			} else {
+				return ( (str.substring(0, 3)).equals("bad") || (str.subSequence(1, 4).equals("bad")));
+			}
+		}
 	}
 
 	/*
@@ -292,11 +297,11 @@ public class Exercises {
 	 stringTimes("Hi", 1) → "Hi"
 	 */
 	public String stringTimes(String str, int n) {
-		if (n > 0) {
-			return str;
-		} else {
-			return str.substring(str.length() * n);
-		}
+		StringBuilder stbuild = new StringBuilder(str.length()*n);
+		for (int i = 1; i <= n; i++)
+			stbuild.append(str);
+		return stbuild.toString();
+		//had to look online for help fo solution, found stringbuilder, remember to look further into this to fully understand what it can do.
 	}
 
 	/*
@@ -323,8 +328,13 @@ public class Exercises {
 	 countXX("xxxx") → 
 	 */
 	public int countXX(String str) {
-		
-		return 0;
+		int numbOfX = 0;
+		for (int i = 0; i < str.length() - 1; i++) {
+			if (str.substring(i, i + 2).equals("xx")) {
+				numbOfX++;
+			}
+		}
+		return numbOfX;
 	}
 
 	/*
@@ -334,11 +344,21 @@ public class Exercises {
 	 doubleX("xxxxx") → true
 	 */
 	public boolean doubleX(String str) {
-		char x = 'x';
-		if (str.equals('x')) {	
+		for(int i = 0; i<str.length() - 1; i++) {
+			if (str.charAt(i) == 'x') {
+				if (str.charAt(i + 1) == 'x') {
+					return true;
+				} else {
+					return false;
+				}
+			}
+			
 		}
 		return false;
-	}
+	}	
+		
+		
+
 
 	/*
 	 Given a string, return a new string made of every other char starting with the first, so "Hello" yields "Hlo".
@@ -347,7 +367,8 @@ public class Exercises {
 	 stringBits("Heeololeo") → "Hello"
 	 */
 	public String stringBits(String str) {
-		return str.substring(0, 1);
+		int length = str.length();
+		return null;
 	}
 
 	/*
@@ -368,10 +389,20 @@ public class Exercises {
 	 last2("axxxaaxx") → 2
 	 */
 	public int last2(String str) {
-		int n = 0;
-		if (str.substring(0, 1) .equals(str.length() - 2)) {
-		} return n;
+		int length = str.length() - 2;
+		int countOfTimes = 0;
+		if (length >= 0) {
+			String end = str.substring(length);
+			for(int i = 0; i < length; i++) {
+			 if (str.substring(i, i + 2).equals(end)) {
+				countOfTimes++;
+			}
+		}
+		
 	}
+		return countOfTimes;
+	}
+		
 
 	/*
 	 Given a string, return a version where all the "x" have been removed. Except an "x" at the very start or end 
