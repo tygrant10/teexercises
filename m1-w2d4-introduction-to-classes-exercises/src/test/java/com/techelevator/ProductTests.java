@@ -12,6 +12,10 @@ import org.junit.Test;
 import com.techelevator.product.Product;
 
 public class ProductTests {
+	private String name;
+	private double price;
+	private double weightInOunces;
+	
 	
 	private Class<Product> klass = null;
 	private Constructor<Product> constructor = null;
@@ -67,6 +71,38 @@ public class ProductTests {
 		} catch (Exception e) {
 			fail("Faild to instantiate Product");
 		}
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public Method getSetWeightInOunces() {
+		return setWeightInOunces;
+	}
+
+	public void setSetWeightInOunces(Method setWeightInOunces) {
+		this.setWeightInOunces = setWeightInOunces;
+	}
+
+	public double getWeightInOunces() {
+		return weightInOunces;
+	}
+
+	public void setWeightInOunces(double weightInOunces) {
+		this.weightInOunces = weightInOunces;
 	}
 
 }
