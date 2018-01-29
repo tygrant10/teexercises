@@ -6,21 +6,24 @@ public class Calculator {
 	
 	
 	public int add(int addend) {
-		
+		this.currentValue += addend;
 		return currentValue;
 	}
 	
 	public int multiply(int multiplier) {
+		this.currentValue *= multiplier;
 		return currentValue;
 	}
 	   
 	
 	public int subtract(int subtrahend) {
+		this.currentValue -= subtrahend;
 		return currentValue;
 	}
 	   
 	
 	public int power(int exponent) {
+		this.currentValue = (int) Math.pow(currentValue, exponent);
 		return currentValue;
 	}
 	   

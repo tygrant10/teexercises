@@ -9,7 +9,7 @@ public class ShoppingCart {
 		
 	}
 	public double getAveragePricePerItem() {
-		return totalAmountOwed / totalNumberOfItems;
+		return totalAmountOwed / (double)totalNumberOfItems;
 		
 	}
 	
