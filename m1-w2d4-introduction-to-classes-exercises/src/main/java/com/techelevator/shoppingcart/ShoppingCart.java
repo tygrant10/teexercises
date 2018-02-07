@@ -13,9 +13,10 @@ public class ShoppingCart {
 		
 	}
 	
-	public void addItems(int itemAdded, double price) {
-		this.totalAmountOwed += (itemAdded * price);
-		this.totalNumberOfItems += itemAdded;
+	public void addItems(int numberOfItems, double pricePerItem) {
+		this.totalNumberOfItems += numberOfItems;
+		this.totalAmountOwed += (numberOfItems * pricePerItem);
+		
 		
 	}
 	

@@ -12,6 +12,8 @@ public class AfternoonExercises {
 		
 		System.out.println(birdsOnBranch);
 		
+		
+		
         /* 
         2. There are 6 birds and 3 nests. How many more birds are there than
         nests? 
@@ -19,7 +21,6 @@ public class AfternoonExercises {
 
 		int birdsNestDiff = 6 -3;
 		System.out.println(birdsNestDiff);
-		
         /* 
         3. 3 raccoons are playing in the woods. 2 go home to eat dinner. How
         many raccoons are left in the woods? 
@@ -228,7 +229,7 @@ public class AfternoonExercises {
         26. Mrs. Hilt bought 6 hot dogs. Each hot dog cost 50 cents. How much
         money did she pay for all of the hot dogs?
         */
-        		float hotDogs = .50f;
+        		double hotDogs = .50;
         		hotDogs *= 6;
         		System.out.println(hotDogs);
         		
@@ -237,9 +238,9 @@ public class AfternoonExercises {
         27. Mrs. Hilt has 50 cents. A pencil costs 7 cents. How many pencils can
         she buy with the money she has?
         */
-        		int hiltFunds = 50;
-        		int pencilPrice = 7;
-        		System.out.println(hiltFunds / pencilPrice);
+        		int hiltFunds = 50 % 7;
+        		
+        		System.out.println(hiltFunds);
         			
         /*    
         28. Mrs. Hilt saw 33 butterflies. Some of the butterflies were red and others
@@ -430,12 +431,13 @@ public class AfternoonExercises {
         cards, how many boxes were filled and how many cards are there in
         the unfilled box?
         */
-            int totalCards = 94;
-            int boxMax = 8;
-            int totalBoxes = totalCards / boxMax;
-            int leftOverCards = totalBoxes - totalCards;
-            System.out.println(totalBoxes);
-            System.out.println(totalBoxes - boxMax);
+        			int totalCards = 94;
+                int boxMax = 8;
+                int totalBoxes = totalCards / boxMax;
+                int leftOverCards = totalBoxes - totalCards;
+                System.out.println(totalBoxes);
+                System.out.println(totalBoxes - boxMax);
+            
         		
         		
         /*

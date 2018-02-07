@@ -10,13 +10,12 @@ public class AfternoonExercises {
 	 sleepIn(false, true) → true
 	 */
 	public boolean sleepIn(boolean weekday, boolean vacation) {
-		if (! weekday || vacation) {
+		if ( ! weekday || vacation ) {
 			return true;
 		} else {
 			return false;
 		}
-		}
-
+	}
 	/*
 	 2. We have two monkeys, a and b, and the parameters aSmile and bSmile indicate if each is smiling. 
 	 We are in trouble if they are both smiling or if neither of them is smiling. Return true if we 
@@ -26,14 +25,12 @@ public class AfternoonExercises {
 	 monkeyTrouble(true, false) → false
 	 */
 	public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
-		if ( ! aSmile && ! bSmile || aSmile && bSmile) {
+		if (aSmile && bSmile || ! aSmile && ! bSmile) {
 			return true;
 		} else {
 			return false;
 		}
-		}
-
-	
+	}
 	/*
 	 3. Given two int values, return their sum. Unless the two values are the same, then return double their sum.
 	 sumDouble(1, 2) → 3
@@ -41,11 +38,11 @@ public class AfternoonExercises {
 	 sumDouble(2, 2) → 8
 	 */
 	public int sumDouble(int a, int b) {
+		int sum = a + b;
 		if ( a == b) {
-			return (a + b) * 2; 
-		}	else {
-			return a + b;
+			return sum * 2;
 		}
+		return sum;
 		}
 	/*
 	 4. Given an int n, return the absolute difference between n and 21, except return double the absolute 
@@ -57,7 +54,10 @@ public class AfternoonExercises {
 	 diff21(-10) → 31
 	 */
 	public int diff21(int n) {
-		return (n > 21) ? (2 * (n - 21)) : Math.abs(21 - n);
+	if (n > 21) {
+			return (Math.abs(n -21 )) * 2;
+		} 
+		return Math.abs(21 -n);
 	}
 
 	/*
@@ -69,11 +69,10 @@ public class AfternoonExercises {
 	 parrotTrouble(false, 6) → false
 	 */
 	public boolean parrotTrouble(boolean talking, int hour) {
-		if ( talking && hour < 7 || talking && hour > 20) {
+		if ((talking && hour < 7) || (talking && hour > 20)) {
 			return true;
-		} else {
-			return false;
-		}
+		} 
+		return false;
 		}
 
 	/*
@@ -85,14 +84,13 @@ public class AfternoonExercises {
 	public boolean makes10(int a, int b) {
 		if (a == 10 || b == 10) {
 			return true;
-		} 
-		else if (a + b == 10) {
+		} else {
+			if (a + b == 10) {
 				return true;
-			} else {
-				return false;
 			}
 		}
-		
+		return false;
+	}
 
 	/*
 	 7. Given 2 int values, return true if one is negative and one is positive. Except if the parameter 
@@ -118,6 +116,7 @@ public class AfternoonExercises {
 			}
 		}
 	}
+
 	/*
 	 8. Return true if the given non-negative number is a multiple of 3 or a multiple of 5. 
 	 (Hint: Think "mod".)
@@ -126,12 +125,12 @@ public class AfternoonExercises {
 	 or35(8) → false
 	 */
 	public boolean or35(int n) {
-if ( 0 == n % 3 || 0 == n % 5) {
-	return true;
-} else {
-	return false;
-}
-}
+		if ( 0 == n % 3 || 0 == n % 5) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 	
 
 	/*
@@ -239,15 +238,19 @@ if ( 0 == n % 3 || 0 == n % 5) {
 	 max1020(11, 9) → 11
 	 */
 	public int max1020(int a, int b) {
-		if (b > a ) {
-			int swap =a;
-			a = b;
-			b = swap;
-		}
-		if (a >= 10 && a <= 20) return a;
-		if (b >= 10 && b<= 20) return b;
-		return 0;
-	}
+		if ((a > 10 && a < 20) && (b > 10 && b < 20)) {
+			if (a > b) {
+				return a;
+			} if 
+				(b > a) {
+					return b;
+				}
+			} else if (( a < 10 || a > 20) || (b < 10 || b > 20)) {
+				return 0;
+			}
+				return 0;
+			}
+	
 
 	/*
 	 16. When squirrels get together for a party, they like to have cigars. A squirrel party is successful
@@ -280,13 +283,14 @@ if ( 0 == n % 3 || 0 == n % 5) {
 	 dateFashion(5, 5) → 1
 	 */
 	public int dateFashion(int you, int date) {
-		if ( ( you >= 8) || ( date >= 8) ) {
-			return 2;
-		} else if ( ( you <= 2) || (date <= 2) ) {
-			return 0;
-		} else {
+			if (you <= 2 || date <= 2) {
+				return 0;
+			} else {
+				if (you >= 8 || date >= 8) {
+					return 2;
+				}
+			}
 			return 1;
-		}
 		}
 
 	/*
@@ -317,19 +321,22 @@ if ( 0 == n % 3 || 0 == n % 5) {
 	 caughtSpeeding(65, true) → 0
 	 */
 	public int caughtSpeeding(int speed, boolean isBirthday) {
-		int adjustedSpeed = speed;
-		if (isBirthday == true) {
-			adjustedSpeed = adjustedSpeed - 5;
-		}
-		int result = 0; 
-		if (adjustedSpeed > 60 && adjustedSpeed <= 80) {
-			result = 1;	
-		} else if (adjustedSpeed >= 81) {
-			
-		}
-		return result;
-	}
+		 
+	          int adjustedSpeed = (isBirthday) ? speed - 5 : speed;
 
+	          int result = 0;
+
+	          if (adjustedSpeed > 60 && adjustedSpeed <= 80)
+	          {
+	              result = 1;
+	          }
+	          else if (adjustedSpeed >= 81)
+	          {
+	              result = 2;
+	          }            
+
+	          return result;
+		 }
 	
 	/*
 	 20. Given 2 ints, a and b, return their sum. However, sums in the range 10..19 inclusive, are forbidden, 
@@ -516,17 +523,17 @@ if ( 0 == n % 3 || 0 == n % 5) {
 	 teaParty(20, 6) → 2
 	 */
 	public int teaParty(int tea, int candy) {
-		if ( tea >= 5 && candy >= 5) {
-			return 1;
-		} else if (tea == candy + candy) {
-			return 2;
-		} else if ( candy == tea + tea) {
-			return 2;
-		}	else if ( ( tea < 5 && candy >=5) || ( tea >= 5 && candy < 5) ) {
+		if (tea < 5 || candy < 5) {
 			return 0;
+		} else {
+			if (tea / candy >= 2 || candy / tea >= 2) {
+				return 2;
+			} else {
+				return 1;
+			}
 		}
-		return candy;
 	}
+	
 	/*
 	 31. Given three ints, a b c, return true if it is possible to add two of the ints to get the third.
 	 twoAsOne(1, 2, 3) → true
@@ -553,18 +560,8 @@ if ( 0 == n % 3 || 0 == n % 5) {
 	 inOrder(1, 1, 2, true) → true
 	 */
 	public boolean inOrder(int a, int b, int c, boolean bOk) {
-		if (bOk == true);
-		bOk = b <= a; return true; {
-		}
-		if ( a < b && c > b) {
-			return true;
-		} else if (a >=b) {
-			return true;
-		} else {
-			return false;
-		}
+		return (a < b || bOk) && b < c;	
 	}
-
 	/*
 	 33. Given three ints, a b c, return true if they are in strict increasing order, such as 2 5 11, 
 	 or 5 6 7, but not 6 5 7 or 5 5 7. However, with the exception that if "equalOk" is true, equality 
@@ -574,7 +571,11 @@ if ( 0 == n % 3 || 0 == n % 5) {
 	 inOrderEqual(5, 5, 7, true) → true
 	 */
 	public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
-		
+		if(equalOk) {
+			return a <= b && b <= c;
+		} else {
+			return a < b && b < c;
+		}
 	}
 
 	/*
@@ -585,9 +586,15 @@ if ( 0 == n % 3 || 0 == n % 5) {
 	 loneSum(3, 3, 3) → 0
 	 */
 	public int loneSum(int a, int b, int c) {
-		if ( a && b && c) {
-			return (a + b + c)
+		int sum = 0;
+		if ( a != b && a != c) {
+			sum += a;
+		} if ( b != a && b != c) {
+			sum += b;
+		} if ( c != a && c != b) {
+			sum += c;
 		}
+		return sum;
 	}
 
 	/*
@@ -601,7 +608,19 @@ if ( 0 == n % 3 || 0 == n % 5) {
 	 luckySum(13, 13, 3) → 0
 	 */
 	public int luckySum(int a, int b, int c) {
-		return 0;
+		int sum = 0;
+		if(a != 13) {
+			sum += a;
+		}
+		if(b != 13 && a != 13) {
+			sum += b;
+		}
+		if(c != 13 && b != 13) {
+			sum += c;
+		}
+		return sum;
 	}
 
 }
+
+

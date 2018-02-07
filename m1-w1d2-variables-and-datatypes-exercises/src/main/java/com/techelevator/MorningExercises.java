@@ -12,6 +12,7 @@ public class MorningExercises {
 
 		System.out.println(numberOfExercises);
 
+
 		/*
 		2. Create a variable to hold a double and call it half.
 			Set it to 0.5.
@@ -19,6 +20,7 @@ public class MorningExercises {
 		double half = 0.5;
 		
 		System.out.println(half);
+		
 
 		/*
 		3. Create a variable to hold a String and call it name.
@@ -45,7 +47,7 @@ public class MorningExercises {
 		/*
 		6. Create a variable called pi and set it to 3.1416.
 		*/
-		float pi = 3.1416f;
+		double pi = 3.1416;
 		
 		System.out.println(pi);
 
@@ -57,7 +59,7 @@ public class MorningExercises {
 		/*
 		8. Create and set a variable that holds the number of buttons on your mouse.
 		*/
-		int buttonsOnMouse = 5;
+		
 		
 		/*
 		9. Create and set a variable that holds the percentage of battery left on
@@ -155,7 +157,9 @@ public class MorningExercises {
 		/*
 		23. What is the String "2" added to the number 10?
 		*/
-			
+		String nameTwo = "2" + 10;
+		
+		System.out.println(nameTwo);
 			
 		/*
 		24. What is 1,000,000,000 * 3?
