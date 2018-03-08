@@ -31,7 +31,7 @@ public class Registration {
 	
 	@NotBlank
 	@Size(min=8)
-	@Pattern(regexp="[%&*\\()$#@!]+")
+	@Pattern(regexp="[%&*\\()$#@!]+", message="That's not a real email")
 	private String password;
 	
 	
