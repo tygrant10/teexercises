@@ -47,8 +47,4 @@ public class JDBCFilmDao implements FilmDao {
         filmRow.setRating(results.getString("rating"));
         return filmRow;
 	}
-    
-    
-
-    
 }

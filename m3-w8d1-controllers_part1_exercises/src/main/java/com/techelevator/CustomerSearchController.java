@@ -11,7 +11,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class CustomerSearchController {
 
-    @Autowired
-    private CustomerDao customerDao;
+	@Autowired
+	private CustomerDao customerDao;
 
-}
+	@RequestMapping(path = "/customerList", method = RequestMethod.GET)
+	public String searchCustomers() {
+		return "customerList";
+	}
+
+	@RequestMapping(path = "/customerListResult", method = RequestMethod.GET)
+    public String searchCustomerResults(@RequestParam String search, @RequestParam String sort,
+    		ModelMap modelHolder) {
+    	modelHolder.put("customerList", customerDao.searchAndSortCustomers(search, sort));
+    	return "customerList"; }
+    }
