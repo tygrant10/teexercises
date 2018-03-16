@@ -1,23 +1,25 @@
 package com.techelevator.dog;
 
-public class Dog {
 
-	private boolean sleeping = false;
+public class Dog {
 	
-	public void sleep() {
-		this.sleeping = true;
-	}
-	public void wakeUp() {
-		this.sleeping = false;
+	private boolean	sleeping = false;
+
+	public boolean isSleeping() {
+		return sleeping;
 	}
 	
 	public String makeSound() {
-		if (!sleeping) {
+		if (sleeping) {
+			return "Zzzzz...";
+		} else {
 			return "Woof!";
 		}
-		return "Zzzzz...";
 	}
-	public boolean isSleeping() {
-		return sleeping;
+	public void sleep() {
+		sleeping = true;
+	}
+	public void wakeUp() {
+		sleeping = false;
 	}
 }

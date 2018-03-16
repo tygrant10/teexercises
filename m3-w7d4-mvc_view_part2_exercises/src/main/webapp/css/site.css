@@ -1,9 +1,71 @@
+.productImage{
+		display:inline-block;
+		max-width:300px;
+		padding-right:2%;
+	
+}
+
+
+
+.productImage img {
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+    vertical-align:middle;
+    width:100%;
+}
+
+
+.productName {
+   vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+   
+}	
+
+
+
+.productStar img{
+   float: left; 
+   width: 50%; 
+   display: inline; 
+   position: relative; 
+   right: 30px;
+   width: 50%;
+}	
+		
+	
+}
+.rightOfImage{
+	display:inline-block;
+	max-width:60%;
+	vertical-align:top;
+	
+}
+
+.rightOfImage h4{
+padding:0;
+margin:0;
+	
+}
+
+.rightOfImage span{
+display:block;
+	
+}
+
 body {
 	width: 100%;
 	background-color: #212121;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
 		sans-serif;
 }
+
+.productDetail{	text-align:left;
+padding: 20px;
+}
+
 
 body, header, nav {
 	margin: 0px;
@@ -20,6 +82,10 @@ nav {
 	margin-bottom: 20px;
 	padding: 5px;
 	height: 50px;
+}
+
+.stars{
+	display:inline;
 }
 
 nav ul {
@@ -56,3 +122,38 @@ section {
 	background-color: #FFF;
 	border-radius: 7px;
 }
+
+.productDetail{	text-align:left;
+padding: 20px;
+}
+
+.productImage{
+		display:inline-block;
+		max-width:300px;
+		padding-right:2%;
+	
+}
+.recipeImage img {
+	width:100%;
+	
+		
+	
+}
+.rightOfImage{
+	display:inline-block;
+	max-width:60%;
+	vertical-align:top;
+	
+}
+.rightOfImage h4{
+padding:0;
+margin:0;
+	
+}
+.rightOfImage span{
+display:block;
+	
+}
+
+
+
